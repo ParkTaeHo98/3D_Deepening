@@ -32,12 +32,15 @@ public class SoundManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-        SourceMainBGM = transform.Find("SourceMainBGM").GetComponent<AudioSource>();
-        SourceWalking = transform.Find("SourceWalking").GetComponent<AudioSource>();
-        SourceAttack = transform.Find("SourceAttack").GetComponent<AudioSource>();
-        SourceSkill = transform.Find("SourceSkill").GetComponent<AudioSource>();
-        SourcePlayerHit = transform.Find("SourcePlayerHit").GetComponent<AudioSource>();
-        SourceMonsterHit = transform.Find("SourceMonsterHit").GetComponent<AudioSource>();
+        SourceMainBGM = transform.Find("BGM/SourceMainBGM").GetComponent<AudioSource>();
+
+        SourceWalking = transform.Find("Action/SourceWalking").GetComponent<AudioSource>();
+
+        SourceAttack = transform.Find("Battle/SourceAttack").GetComponent<AudioSource>();
+        SourceSkill = transform.Find("Battle/SourceSkill").GetComponent<AudioSource>();
+
+        SourcePlayerHit = transform.Find("Damage/SourcePlayerHit").GetComponent<AudioSource>();
+        SourceMonsterHit = transform.Find("Damage/SourceMonsterHit").GetComponent<AudioSource>();
     }
     public void Play(AudioSource _audio, AudioClip _clip)
     {
