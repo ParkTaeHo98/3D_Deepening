@@ -10,6 +10,7 @@ public class PlayerInput : MonoBehaviour
     private void Awake()
     {
         InputActions = new PlayerInputActions();
+
         PlayerActions = InputActions.Player;
     }
     private void OnEnable()
